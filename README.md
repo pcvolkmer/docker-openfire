@@ -1,11 +1,8 @@
-[![Docker Repository on Quay.io](https://quay.io/repository/sameersbn/openfire/status "Docker Repository on Quay.io")](https://quay.io/repository/sameersbn/openfire)
-
-# sameersbn/openfire:3.10.3-16
+# pcvolkmer/openfire:4.1.0
 
 - [Introduction](#introduction)
   - [Contributing](#contributing)
   - [Issues](#issues)
-  - [Announcements](../../issues/1)
 - [Getting started](#getting-started)
   - [Installation](#installation)
   - [Quickstart](#quickstart)
@@ -16,6 +13,8 @@
 # Introduction
 
 `Dockerfile` to create a [Docker](https://www.docker.com/) container image for [Openfire](http://www.igniterealtime.org/projects/openfire/).
+
+This is a fork of [sameersbn/docker-openfire](https://github.com/sameersbn/docker-openfire) providing Openfire 4.x based on [OpenJDK 8 image](https://hub.docker.com/_/openjdk/).
 
 Openfire is a real time collaboration (RTC) server licensed under the Open Source Apache License. It uses the only widely adopted open protocol for instant messaging, XMPP (also called Jabber). Openfire is incredibly easy to setup and administer, but offers rock-solid security and performance.
 
@@ -43,18 +42,16 @@ If the above recommendations do not help then [report your issue](../../issues/n
 
 ## Installation
 
-Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/sameersbn/openfire) and is the recommended method of installation.
-
-> **Note**: Builds are also available on [Quay.io](https://quay.io/repository/sameersbn/openfire)
+Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/pcvolkmer/openfire) and is the recommended method of installation.
 
 ```bash
-docker pull sameersbn/openfire:3.10.3-16
+docker pull pcvolkmer/openfire:4.1.0
 ```
 
 Alternatively you can build the image yourself.
 
 ```bash
-docker build -t sameersbn/openfire github.com/sameersbn/docker-openfire
+docker build -t pcvolkmer/openfire github.com/pcvolkmer/docker-openfire
 ```
 
 ## Quickstart
@@ -65,7 +62,7 @@ Start Openfire using:
 docker run --name openfire -d --restart=always \
   --publish 9090:9090 --publish 5222:5222 --publish 7777:7777 \
   --volume /srv/docker/openfire:/var/lib/openfire \
-  sameersbn/openfire:3.10.3-16
+  pcvolkmer/openfire:4.1.0
 ```
 
 *Alternatively, you can use the sample [docker-compose.yml](docker-compose.yml) file to start the container using [Docker Compose](https://docs.docker.com/compose/)*
@@ -102,7 +99,7 @@ To upgrade to newer releases:
   1. Download the updated Docker image:
 
   ```bash
-  docker pull sameersbn/openfire:3.10.3-16
+  docker pull pcvolkmer/openfire:4.1.0
   ```
 
   2. Stop the currently running image:
@@ -122,7 +119,7 @@ To upgrade to newer releases:
   ```bash
   docker run -name openfire -d \
     [OPTIONS] \
-    sameersbn/openfire:3.10.3-16
+    pcvolkmer/openfire:4.1.0
   ```
 
 ## Shell Access

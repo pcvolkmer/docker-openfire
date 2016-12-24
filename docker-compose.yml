@@ -1,8 +1,10 @@
-Openfire:
-  image: sameersbn/openfire:3.10.3-16
+version: '2'
+
+openfire:
+  image: pcvolkmer/openfire:4.1.0
   ports:
     - "9090:9090"
     - "5222:5222"
     - "7777:7777"
   volumes:
-    - /srv/docker/openfire/openfire:/var/lib/openfire
+    - openfire-data:/var/lib/openfire
