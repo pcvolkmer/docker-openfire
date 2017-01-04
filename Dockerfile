@@ -1,7 +1,7 @@
 FROM openjdk:8-jre
 MAINTAINER mail@pcvolkmer.de
 
-ENV OPENFIRE_VERSION=4.1.0 \
+ENV OPENFIRE_VERSION=4.1.1 \
     OPENFIRE_USER=openfire \
     OPENFIRE_DATA_DIR=/var/lib/openfire \
     OPENFIRE_LOG_DIR=/var/log/openfire

@@ -1,5 +1,8 @@
 # Changelog
 
+**4.1.1**
+- openfire: upgrade to 4.1.1
+
 **4.1.0**
 - openfire: upgrade to 4.1.0
 - Use openjdk:8-jre base image
